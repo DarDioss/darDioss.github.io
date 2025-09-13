@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Arial', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+    z-index: -2;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Центральная аватарка */
+.avatar-center {
+    margin-bottom: 40px;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 0 60px rgba(255, 255, 255, 0.2),
+        0 0 100px rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.avatar-halo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    animation: pulseHalo 3s ease-in-out infinite;
+    filter: blur(15px);
+    z-index: 1;
+}
+
+.floating-particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-radius: 50%;
+    animation: floatParticle 4s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.particle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 60%; left: 80%; animation-delay: -1s; }
+.particle:nth-child(3) { top: 80%; left: 40%; animation-delay: -2s; }
+
+@keyframes floatParticle {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+    50% { transform: translate(20px, -20px) scale(1.2); opacity: 1; }
+}
+
+@keyframes pulseHalo {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.profile-name {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.profile-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1em;
+}
+
+/* Круг социальных ссылок */
+.social-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 40px;
+}
+
+.social-item {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-item:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.telegram {
+    top: 20%;
+    left: 20%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.discord {
+    top: 20%;
+    right: 20%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.home {
+    bottom: 20%;
+    left: 20%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.projects {
+    bottom: 20%;
+    right: 20%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Центральный музыкальный плеер */
+.music-player-center {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.track-info-center {
+    margin-bottom: 15px;
+}
+
+.track-name {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.artist {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.player-controls-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-btn-center {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.control-btn-center:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+#volumeSlider {
+    width: 100px;
+    height: 5px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    outline: none;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+/* Экран запуска */
+.start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.start-content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 50px 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.start-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.start-logo i {
+    font-size: 2em;
+    color: #000000;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.start-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.start-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+}
+
+.start-btn {
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 25px;
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .social-circle {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .social-item {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+    }
+}
+
+/* Делаем всё компактнее и ближе */
+.container {
+    padding: 20px !important;
+    margin: 10px;
+}
+
+.avatar-center {
+    margin-bottom: 30px !important;
+}
+
+.profile-avatar {
+    width: 120px !important;
+    height: 120px !important;
+    border: 3px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Старые крутые эффекты возвращаем */
+.glow-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    z-index: 1;
+}
+
+.orbit-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    animation: rotateOrbit 6s linear infinite;
+}
+
+.orbit-ring::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #667eea);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.orbit-ring:nth-child(1) {
+    animation-duration: 8s;
+    border-image: linear-gradient(45deg, #ff6b6b, transparent) 1;
+}
+
+.orbit-ring:nth-child(2) {
+    animation-duration: 12s;
+    animation-direction: reverse;
+    border-image: linear-gradient(45deg, #4ecdc4, transparent) 1;
+}
+
+.orbit-ring:nth-child(3) {
+    animation-duration: 10s;
+    border-image: linear-gradient(45deg, #667eea, transparent) 1;
+}
+
+@keyframes rotateOrbit {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Энергетические волны */
+.energy-waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    z-index: 0;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: expandWave 3s ease-out infinite;
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 1s; }
+.wave:nth-child(3) { animation-delay: 2s; }
+
+@keyframes expandWave {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Социальные ссылки делаем ближе */
+.social-circle {
+    width: 280px !important;
+    height: 280px !important;
+    margin: 0 auto 30px !important;
+}
+
+.social-item {
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 1.4em !important;
+}
+
+/* Музыкальный плеер компактнее */
+.music-player-center {
+    padding: 15px !important;
+    margin-top: 20px;
+}
+
+.player-controls-center {
+    gap: 12px !important;
+}
+
+.control-btn-center {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.1em !important;
+}
