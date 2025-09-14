@@ -32,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.81);
+            background: rgba(0, 0, 0, 0.9);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -81,21 +81,21 @@
             z-index: -1;
         }
 
-        /* Основной контейнер - сделал прозрачным на 80% */
+        /* Основной контейнер - увеличил ширину и прозрачность */
         .main-container {
             width: 100%;
-            max-width: 550px; /* Увеличил ширину */
-            background: rgba(0, 0, 0, 0.2);
+            max-width: 650px; /* Увеличил ширину */
+            background: rgba(0, 0, 0, 0.35); /* Увеличил прозрачность */
             border-radius: 30px;
             padding: 40px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.15);
             box-shadow: 
                 0 0 100px rgba(255, 0, 0, 0.15),
                 0 0 50px rgba(255, 0, 0, 0.08),
                 inset 0 0 30px rgba(0, 0, 0, 0.5);
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             transform-style: preserve-3d;
             perspective: 1000px;
             transition: transform 0.1s ease;
@@ -208,17 +208,18 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(204, 0, 0, 0.1));
-            padding: 6px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 0, 0.3);
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.25), rgba(204, 0, 0, 0.15));
+            padding: 8px 15px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 0, 0, 0.35);
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
+            backdrop-filter: blur(5px);
         }
 
         .premium-badge:hover {
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.3), rgba(204, 0, 0, 0.2));
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.35), rgba(204, 0, 0, 0.25));
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
         }
 
@@ -234,7 +235,7 @@
         }
 
         .badge-text {
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-weight: 600;
             color: #ff3333;
             text-transform: uppercase;
@@ -260,21 +261,22 @@
         }
 
         .moderator-badge {
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(204, 0, 0, 0.1));
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.25), rgba(204, 0, 0, 0.15));
             color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 0, 0, 0.35);
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
+            backdrop-filter: blur(5px);
         }
 
         .moderator-badge:hover {
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.3), rgba(204, 0, 0, 0.2));
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.35), rgba(204, 0, 0, 0.25));
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
         }
 
@@ -290,7 +292,7 @@
         }
 
         .moderator-text {
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-weight: 600;
             color: #ff3333;
             text-transform: uppercase;
@@ -317,21 +319,22 @@
 
         /* OwnerWeb бейдж */
         .ownerweb-badge {
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(204, 0, 0, 0.1));
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.25), rgba(204, 0, 0, 0.15));
             color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 0, 0, 0.35);
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
+            backdrop-filter: blur(5px);
         }
 
         .ownerweb-badge:hover {
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.3), rgba(204, 0, 0, 0.2));
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.35), rgba(204, 0, 0, 0.25));
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
         }
 
@@ -347,7 +350,7 @@
         }
 
         .ownerweb-text {
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-weight: 600;
             color: #ff3333;
             text-transform: uppercase;
@@ -374,11 +377,11 @@
 
         /* PremiumPlus бейдж */
         .premiumplus-badge {
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(204, 0, 0, 0.1));
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.25), rgba(204, 0, 0, 0.15));
             color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 0, 0, 0.35);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -386,6 +389,7 @@
             transition: all 0.3s ease;
             position: relative;
             animation: premiumplusGlow 2s infinite alternate;
+            backdrop-filter: blur(5px);
         }
 
         @keyframes premiumplusGlow {
@@ -394,7 +398,7 @@
         }
 
         .premiumplus-badge:hover {
-            background: linear-gradient(45deg, rgba(255, 0, 0, 0.3), rgba(204, 0, 0, 0.2));
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.35), rgba(204, 0, 0, 0.25));
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
             animation: none;
         }
@@ -417,7 +421,7 @@
         }
 
         .premiumplus-text {
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-weight: 600;
             color: #ff0000;
             text-transform: uppercase;
@@ -450,7 +454,7 @@
             line-height: 1.5;
         }
 
-        /* Кнопки действий с неоновым эффектом - улучшил прозрачность */
+        /* Кнопки действий с неоновым эффектом - увеличил прозрачность */
         .action-buttons {
             display: flex;
             justify-content: center;
@@ -463,7 +467,7 @@
         .action-btn {
             padding: 15px 30px;
             border-radius: 50px;
-            background: rgba(255, 0, 0, 0.15); /* Красные кнопки с прозрачностью */
+            background: rgba(255, 0, 0, 0.2); /* Увеличил прозрачность */
             border: 2px solid transparent;
             color: white;
             font-size: 1.1em;
@@ -501,7 +505,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5); /* Увеличил прозрачность */
             z-index: -1;
             border-radius: 48px;
         }
@@ -515,10 +519,10 @@
         .action-btn:hover {
             transform: translateY(-5px) translateZ(15px);
             box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
-            background: rgba(255, 0, 0, 0.25);
+            background: rgba(255, 0, 0, 0.3); /* Увеличил прозрачность */
         }
 
-        /* Социальные ссылки с неоновым эффектом - улучшил прозрачность */
+        /* Социальные ссылки с неоновым эффектом - увеличил прозрачность */
         .social-section {
             display: flex;
             justify-content: center;
@@ -541,7 +545,7 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             border: 2px solid transparent;
-            background: rgba(255, 0, 0, 0.15); /* Красные кнопки */
+            background: rgba(255, 0, 0, 0.2); /* Увеличил прозрачность */
             transform: translateZ(10px);
             cursor: pointer;
             position: relative;
@@ -570,7 +574,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5); /* Увеличил прозрачность */
             z-index: -1;
             border-radius: 50%;
         }
@@ -578,17 +582,17 @@
         .social-item:hover {
             transform: scale(1.2) translateZ(20px);
             box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
-            background: rgba(255, 0, 0, 0.25);
+            background: rgba(255, 0, 0, 0.3); /* Увеличил прозрачность */
         }
 
-        /* Секция с описанием разработки - сделал прозрачной */
+        /* Секция с описанием разработки - увеличил прозрачность */
         .description-section {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85); /* Увеличил прозрачность */
             border-radius: 30px;
             padding: 40px;
             display: flex;
@@ -626,7 +630,7 @@
         .back-btn {
             padding: 12px 30px;
             border-radius: 50px;
-            background: rgba(255, 0, 0, 0.15);
+            background: rgba(255, 0, 0, 0.2);
             border: 2px solid rgba(255, 0, 0, 0.3);
             color: white;
             font-size: 1.1em;
@@ -636,23 +640,23 @@
         }
 
         .back-btn:hover {
-            background: rgba(255, 0, 0, 0.25);
+            background: rgba(255, 0, 0, 0.3);
             transform: translateY(-3px);
         }
 
-        /* Музыкальный плеер - сделал прозрачным и красным */
+        /* Музыкальный плеер - увеличил прозрачность */
         .music-section {
             width: 100%;
             max-width: 350px;
-            background: rgba(255, 0, 0, 0.1);
-            border: 1px solid rgba(255, 0, 0, 0.2);
+            background: rgba(255, 0, 0, 0.15); /* Увеличил прозрачность */
+            border: 1px solid rgba(255, 0, 0, 0.25);
             border-radius: 20px;
             padding: 20px;
             backdrop-filter: blur(15px);
             margin: 0 auto;
             position: relative;
             transform: translateZ(10px);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
         }
 
         .artist-avatar {
@@ -722,7 +726,7 @@
             height: 50px;
             border-radius: 50%;
             border: 2px solid rgba(255, 0, 0, 0.3);
-            background: rgba(255, 0, 0, 0.15);
+            background: rgba(255, 0, 0, 0.2);
             color: #ffffff;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -733,7 +737,7 @@
         }
 
         .control-btn:hover {
-            background: rgba(255, 0, 0, 0.25);
+            background: rgba(255, 0, 0, 0.3);
             transform: scale(1.1);
         }
 
@@ -777,7 +781,7 @@
             .main-container {
                 padding: 30px 20px;
                 border-radius: 20px;
-                max-width: 90%; /* Увеличил ширину для мобильных */
+                max-width: 95%; /* Увеличил ширину для мобильных */
             }
             
             .profile-avatar {
@@ -796,6 +800,20 @@
             
             .badges-container {
                 gap: 10px;
+            }
+            
+            .premium-badge,
+            .moderator-badge,
+            .ownerweb-badge,
+            .premiumplus-badge {
+                padding: 6px 12px;
+            }
+            
+            .badge-text,
+            .moderator-text,
+            .ownerweb-text,
+            .premiumplus-text {
+                font-size: 0.7em;
             }
             
             .action-btn {
@@ -873,12 +891,12 @@
                     <div class="ownerweb-badge">
                         <span class="ownerweb-icon"><i class="fas fa-globe"></i></span>
                         <span class="ownerweb-text">OwnerWeb</span>
-                        <div class="ownerweb-tooltip">Владелец веб-проектов</div>
+                        <div class="ownerweb-tooltip">Владелец проекта</div>
                     </div>
                     <div class="premiumplus-badge">
                         <span class="premiumplus-icon"><i class="fas fa-star"></i></span>
                         <span class="premiumplus-text">PremiumPlus</span>
-                        <div class="premiumplus-tooltip">Эксклюзивный премиум статус</div>
+                        <div class="premiumplus-tooltip">премиум плюс</div>
                     </div>
                 </div>
             </div>
